@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import Nav from '../components/Nav'
+import ProjectCard from '../components/ProjectCard'
+import TopSvg from '../components/svgs/layered-waves-haikei.svg'
+import BotSvg from '../components/svgs/layered-waves-haikei-bottom4.svg'
+import {FaChevronDown} from 'react-icons/fa/'
+import "animate.css"
 import { Inter } from '@next/font/google'
 
 
@@ -17,12 +22,67 @@ export default function Home() {
 
 
       
-      <main className='snap-y snap-mandatory scroll-smooth h-screen w-screen overflow-scroll'>
-        <Nav />
-        <section id="blob" className='snap-start bg-amber-200 w-screen h-screen flex items-center justify-center text-8xl'>1</section>
-        <section id="about" className='snap-start bg-teal-200 w-screen h-screen flex items-center justify-center text-8xl'>2</section>
-        <section id="projects" className='snap-start bg-cyan-400 w-screen h-screen flex items-center justify-center text-8xl'>3</section>
-        <section id="contact" className='snap-start bg-fuchsia-200 w-screen h-screen flex items-center justify-center text-8xl'>4</section>
+      <main className='snap-y snap-mandatory scroll-smooth h-screen w-full overflow-y-scroll'>
+          <Nav />
+        <section id="blob" className='snap-start w-full h-full flex flex-col bg-lavaOrange overflow-hidden'>
+          <div className="flex items-center justify-center text-9xl grow">
+            <h1 className="animate__animated animate__fadeInDown animate__slower text-violet-500 text-9xl uppercase font-extrabold text-center drop-shadow-lg">Colorful Code</h1>
+          </div>
+          <a className='animate__animated animate__fadeInUpBig animate__slower  self-center' href="#about"><FaChevronDown className='animate__animated animate__delay-3s animate__shakeY animate__infinite self-center text-6xl'/></a>
+          <BotSvg className='w-full h-fit'/>
+        </section>
+
+        <section id="about" className='snap-start bg-brightMustard h-screen w-full flex flex-col overflow-hidden'>
+          <div className='flex flex-col grow m-16'>
+            <h1 className='text-9xl'>About</h1>
+            <h2 className='text-2xl'>
+              <p>Hi! <br /> My name is <span className='uppercase'>Amir Hakim </span>and I am a 35 year old Software Engineer based in Sweden. I run Colorful Code and work as a contractor in the IT sector. </p>
+            </h2>
+            <p> Tools:</p>
+              <ul>
+                <li>Java</li>
+                <li>TypeScript</li>
+                <li>PHP</li>
+                <li>MySql</li>
+                <li>Groovy</li>
+                <li>C++</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Angular</li>
+                <li>NextJs</li>
+                <li>Laravel</li>
+                <li>REST API</li>
+                <li>Git</li>
+                <li>Github</li>
+                <li>Gitlab</li>
+                <li>Jira</li>
+                <li>TeamCity</li>
+                <li>Scrum</li>
+                <li>Postman</li>
+                <li>Spring</li>
+                <li>Target Process</li>
+                <li>IntelliJ</li>
+                <li>Visual Studio Code</li>
+                <li>Docker</li>
+
+              </ul>
+          </div>
+
+          <BotSvg className='w-full h-fit'/>
+
+          </section>
+
+        <section id="projects" className='snap-start bg-cyan-400 h-screen w-full flex flex-col items-center justify-center overflow-y-auto'>
+          <div className=' text-center'>
+            <h1 className='text-5xl mb-2 sm:text-9xl sm:mb-10'>Projects</h1>
+            <p className='text-sm mb-2' > (More projects will be added soon)</p>
+          </div>
+          <div className='flex flex-wrap justify-center overflow-y-auto'>
+            <ProjectCard imageName="teaguide" imageAlt="Image of this site" header="This portfolio site" repoName="nextjs-portfolio-site" siteUrl="test" text="A single page application to showcase my projects and promote my business. I wanted to learn some new frameworks with this project so I wrote this site using NextJS and Tailwind."/>
+          </div>
+        </section>
+        
+        <section id="contact" className='snap-start bg-fuchsia-200 w-full flex items-center justify-center text-8xl'>4</section>
 
       </main>
 

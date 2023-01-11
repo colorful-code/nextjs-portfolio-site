@@ -1,14 +1,24 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Nav from '../components/Nav'
 import ProjectCard from '../components/ProjectCard'
+import ContactForm from '../components/ContactForm'
+import SkillsIconLink from '../components/SkillsIconLink'
 import TopSvg from '../components/svgs/layered-waves-haikei.svg'
+import Brushstroke from '../components/svgs/brushstroke_small.svg'
 import BotSvg from '../components/svgs/layered-waves-haikei-bottom4.svg'
-import {FaChevronDown} from 'react-icons/fa/'
+import {FaChevronDown, FaJava, FaCss3Alt, FaHtml5, FaJsSquare, FaPhp, FaGit} from 'react-icons/fa/'
+import {IoLocationOutline} from 'react-icons/io5/'
+import {DiScrum} from 'react-icons/di/'
+import {SiTypescript, SiMysql, SiCplusplus, SiApachegroovy, SiAngular, SiNextdotjs, SiLaravel, SiGithub, SiGitlab, SiJirasoftware, SiTeamcity, SiPostman, SiSpring, SiSpringboot, SiIntellijidea, SiVisualstudiocode, SiDocker, SiLinux, SiTailwindcss} from 'react-icons/si/'
+import {AiFillLinkedin, AiFillFacebook, AiOutlineGithub} from 'react-icons/ai/'
 import "animate.css"
 import { Inter } from '@next/font/google'
 
 
 const inter = Inter({ subsets: ['latin'] })
+
+const iconStyle = "w-5/5 h-2/5 text-white";
 
 export default function Home() {
   return (
@@ -24,68 +34,95 @@ export default function Home() {
       
       <main className='snap-y snap-mandatory scroll-smooth h-screen w-full overflow-y-scroll'>
           <Nav />
-        <section id="blob" className='snap-start w-full h-full flex flex-col bg-lavaOrange overflow-hidden'>
-          <div className="flex items-center justify-center text-9xl grow">
-            <h1 className="animate__animated animate__fadeInDown animate__slower text-violet-500 text-9xl uppercase font-extrabold text-center drop-shadow-lg">Colorful Code</h1>
-          </div>
-          <a className='animate__animated animate__fadeInUpBig animate__slower  self-center' href="#about"><FaChevronDown className='animate__animated animate__delay-3s animate__shakeY animate__infinite self-center text-6xl'/></a>
-          <BotSvg className='w-full h-fit'/>
-        </section>
-
-        <section id="about" className='snap-start bg-brightMustard h-screen w-full flex flex-col overflow-hidden'>
-          <div className='flex flex-col grow m-16'>
-            <h1 className='text-9xl'>About</h1>
-            <h2 className='text-2xl'>
-              <p>Hi! <br /> My name is <span className='uppercase'>Amir Hakim </span>and I am a 35 year old Software Engineer based in Sweden. I run Colorful Code and work as a contractor in the IT sector. </p>
-            </h2>
-            <p> Tools:</p>
-              <ul>
-                <li>Java</li>
-                <li>TypeScript</li>
-                <li>PHP</li>
-                <li>MySql</li>
-                <li>Groovy</li>
-                <li>C++</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Angular</li>
-                <li>NextJs</li>
-                <li>Laravel</li>
-                <li>REST API</li>
-                <li>Git</li>
-                <li>Github</li>
-                <li>Gitlab</li>
-                <li>Jira</li>
-                <li>TeamCity</li>
-                <li>Scrum</li>
-                <li>Postman</li>
-                <li>Spring</li>
-                <li>Target Process</li>
-                <li>IntelliJ</li>
-                <li>Visual Studio Code</li>
-                <li>Docker</li>
-
-              </ul>
-          </div>
-
-          <BotSvg className='w-full h-fit'/>
-
+          <section id="home" className='snap-start bg-lavaOrange w-full h-full flex flex-col justify-center overflow-hidden'>
+            <h1 className="animate__animated animate__fadeInDown animate__slower mb-20 text-violet-500 uppercase font-extrabold text-center drop-shadow-lg text-5xl sm:text-9xl ">Colorful Code</h1>
+            <a className='animate__animated animate__fadeInUpBig animate__slower  self-center' href="#about"><FaChevronDown className='animate__animated animate__delay-3s animate__shakeY animate__infinite self-center text-4xl sm:text-6xl'/></a>
           </section>
 
-        <section id="projects" className='snap-start bg-cyan-400 h-screen w-full flex flex-col items-center justify-center overflow-y-auto'>
-          <div className=' text-center'>
-            <h1 className='text-5xl mb-2 sm:text-9xl sm:mb-10'>Projects</h1>
-            <p className='text-sm mb-2' > (More projects will be added soon)</p>
+          <section id="about" className='snap-start bg-amber-400 w-full h-full flex flex-col overflow-y-auto p-8'>
+            <div className='relative flex justify-center'>
+              <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-brightMustard"/>
+              <h1 className='sectionTitle relative uppercase drop-shadow-lg text-white text-center font-semibold text-3xl mb-2 sm:text-9xl sm:mb-10'>About
+              </h1>
+            </div>
+            <Image className=" self-center shadow-2xl w-70 h-70 object-fill rounded-md" src="/images/profile.jpg" width="200" height="0" alt="Picture of Amir" />
+            <div className='text-base space-y-6 mb-6 mt-6 self-center'>
+              <p className="font-bold text-center text-2xl text-black underline decoration-strongPurple underline-offset-8 decoration-4">Hi, I'm Amir!</p>
+              <p className="font-light text-gray-800">I am a 35 year old Software Engineer based in Sweden. I have roughly 4,5 years of experience as a full stack developer in the IT industry.</p>
+              <p className="font-light text-gray-800"> At the end of 2022 I decided I want to work as an independent contractor and started my own company Colorful Code.</p>
+            </div>
+            <div className='flex flex-col '>
+              <h1 className='text-center font-semibold text-xl sm:text-9xl sm:mb-10'>Tools I use</h1>
+              <div className="flex flex-wrap p-2 justify-center">
+                <SkillsIconLink url="https://www.java.com" icon={<FaJava className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.w3.org/Style/CSS/Overview.en.html" icon={<FaCss3Alt className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.javascript.com" icon={<FaJsSquare className={iconStyle} />}/>
+                <SkillsIconLink url="https://html.spec.whatwg.org/multipage" icon={<FaHtml5 className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.typescriptlang.org" icon={<SiTypescript className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.php.net" icon={<FaPhp className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.mysql.com" icon={<SiMysql className={iconStyle} />}/>
+                <SkillsIconLink url="https://isocpp.org" icon={<SiCplusplus className={iconStyle} />}/>
+                <SkillsIconLink url="https://groovy-lang.org" icon={<SiApachegroovy className={iconStyle} />}/>
+                <SkillsIconLink url="https://angular.io" icon={<SiAngular className={iconStyle} />}/>
+                <SkillsIconLink url="https://nextjs.org" icon={<SiNextdotjs className={iconStyle} />}/>
+                <SkillsIconLink url="https://laravel.com" icon={<SiLaravel className={iconStyle} />}/>
+                <SkillsIconLink url="https://github.com" icon={<SiGithub className={iconStyle} />}/>
+                <SkillsIconLink url="https://git-scm.com" icon={<FaGit className={iconStyle} />}/>
+                <SkillsIconLink url="https://about.gitlab.com" icon={<SiGitlab className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.atlassian.com/software/jira" icon={<SiJirasoftware className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.jetbrains.com/teamcity" icon={<SiTeamcity className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.scrum.org" icon={<DiScrum className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.postman.com" icon={<SiPostman className={iconStyle} />}/>
+                <SkillsIconLink url="https://spring.io" icon={<SiSpring className={iconStyle} />}/>
+                <SkillsIconLink url="https://spring.io/projects/spring-boot" icon={<SiSpringboot className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.jetbrains.com/idea" icon={<SiIntellijidea className={iconStyle} />}/>
+                <SkillsIconLink url="https://code.visualstudio.com" icon={<SiVisualstudiocode className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.docker.com" icon={<SiDocker className={iconStyle} />}/>
+                <SkillsIconLink url="https://www.linux.org" icon={<SiLinux className={iconStyle} />}/>
+                <SkillsIconLink url="https://tailwindcss.com/" icon={<SiTailwindcss className={iconStyle} />}/>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects" className='snap-start bg-teal-500  w-full h-full flex flex-col overflow-y-auto p-8'>
+          <div className='text-center border-b'>
+            <h1 className='uppercase drop-shadow-lg text-center font-semibold text-3xl mb-2 sm:text-9xl sm:mb-10'>Projects</h1>
+            <p className='text-sm mb-2' > Most of my work are things I can not share here due to client confidentiality. However, I have more personal projects that will be added soon.</p>
           </div>
-          <div className='flex flex-wrap justify-center overflow-y-auto'>
-            <ProjectCard imageName="teaguide" imageAlt="Image of this site" header="This portfolio site" repoName="nextjs-portfolio-site" siteUrl="test" text="A single page application to showcase my projects and promote my business. I wanted to learn some new frameworks with this project so I wrote this site using NextJS and Tailwind."/>
+          <div className='flex flex-wrap grow justify-center overflow-y-auto'>
+            <ProjectCard imageName="teaguide" imageAlt="Image of this site" header="This portfolio site" repoName="nextjs-portfolio-site" siteUrl="https://www.colorfulcode.se" text="A single page application to showcase my projects and promote my business. I wanted to learn some new frameworks with this project so I wrote this site using NextJS and Tailwind."/>
+            <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" text="Currently under construction."/>
           </div>
         </section>
-        
-        <section id="contact" className='snap-start bg-fuchsia-200 w-full flex items-center justify-center text-8xl'>4</section>
 
+        <section id="contact" className='snap-start bg-indigo-400 w-full h-full flex flex-col align-middle overflow-y-auto p-8'>
+          <h1 className='uppercase drop-shadow-lg font-semibold text-center text-yellow-300 text-5xl mb-4 sm:text-9xl sm:mb-10'>Contact</h1>
+
+          {/* Main container in this section */}
+          <div className="flex flex-wrap self-center space-y-4 w-full shadow-2xl rounded-lg sm:w-fit p-2">
+            <div className="flex w-full justify-center mt-4">
+              <h2 className="text-center text-xs font-bold shadow-lg border rounded-lg border-green-400 bg-green-100 p-2">Currently available for new contracts.</h2>
+            </div>
+            {/* Container for contact form and address/icons */}
+            <div className='flex flex-wrap w-full justify-center p-2'>
+                <div className='flex max-w-xl'>
+                  <ContactForm bgColor="bg-indigo-400" borderColor="border-slate-400"/>   
+                </div>
+                <div className='flex grow flex-col h-auto self-center m-4 space-y-10'>
+                  <div className="flex items-center justify-center ">
+                    <IoLocationOutline className='text-lg mr-1'/>
+                    <p className='font-light'>Colorful Code<br />Gullbergsgatan 6,  582 46 <br />Linköping, Sweden</p> 
+                  </div>
+                  <div className='flex justify-center space-x-4'>
+                    <AiFillLinkedin className='text-3xl text-slate-700'/>
+                    <AiFillFacebook className='text-3xl text-slate-700'/>
+                    <AiOutlineGithub className='text-3xl text-slate-700'/>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </section>
       </main>
-
     </>
   )
 }

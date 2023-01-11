@@ -19,7 +19,7 @@ const Nav = ({ imageName, imageAlt, header, repoName, siteUrl, text }: ProjectCa
         <div className="m-4 max-w-xs w-5/6 rounded overflow-hidden shadow-lg sm:w-96 sm:mt-10">
             <Image className="w-full h-40 object-cover" src={`/images/${imageName}.jpg`} width="200" height="0" alt={imageAlt} />
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{header}</div>
+                <div className="font-medium text-xl mb-2">{header}</div>
                 <p className="text-gray-700 text-base">
                 {text}
                 </p>

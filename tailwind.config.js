@@ -10,7 +10,10 @@ module.exports = {
         'lavaOrange': '#FA7268',
         'wineRed': '#871400',
         'brightMustard': '#f5730a',
-      }
+        'oxfordBlue': '#011936',
+        'strongPurple': '#7f00c1'
+      },
+      border: ['focus'],
     },
   },
   plugins: [],

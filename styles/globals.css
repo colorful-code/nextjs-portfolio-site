@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.animate__animated.animate__shakeY  {
+.animateDuration2100ms  {
+  --animate-duration: 2.1s;
+}
+
+.animateDuration10s  {
   --animate-duration: 10s;
 }
 
-.animate__animated.animate__fadeIn  {
-  --animate-duration: 10s;
+.animateShortenDelay {
+  --animate-delay: 0.2s;
 }
 
 .sectionTitle {

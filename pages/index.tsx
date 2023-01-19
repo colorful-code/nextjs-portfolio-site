@@ -12,7 +12,6 @@ import {IoLocationOutline} from 'react-icons/io5/'
 import {DiScrum} from 'react-icons/di/'
 import {SiTypescript, SiMysql, SiCplusplus, SiApachegroovy, SiAngular, SiNextdotjs, SiLaravel, SiGithub, SiGitlab, SiJirasoftware, SiTeamcity, SiPostman, SiSpring, SiSpringboot, SiIntellijidea, SiVisualstudiocode, SiDocker, SiLinux, SiTailwindcss, SiAdobephotoshop} from 'react-icons/si/'
 import {AiFillLinkedin, AiFillFacebook, AiOutlineGithub} from 'react-icons/ai/'
-import "animate.css"
 import { Inter } from '@next/font/google'
 import { InView } from 'react-intersection-observer';
 
@@ -34,27 +33,27 @@ export default function Home() {
       <main className='snap-y snap-mandatory scroll-smooth h-screen w-full overflow-y-scroll'>
         <Nav />
         <section id="home" className='snap-start bg-lavaOrange w-full h-full flex flex-col justify-center overflow-hidden'>
-          <h1 className="animate__animated animate__fadeInDown animate__fast mb-20 text-violet-500 uppercase font-extrabold text-center drop-shadow-lg text-5xl sm:text-9xl ">Colorful Code</h1>
-          <h2 className="animate__animated animate__fadeIn animate__slow animateShortenDelay animate__delay-3s mb-20 text-zinc-800 lowercase font-light text-center text-sm sm:text-lg sm:font-normal">Bringing a human touch to technology</h2>
-          <a className='animate__animated animate__fadeInUpBig animateDuration2100ms self-center' href="#about"><FaChevronDown className='animate__animated animate__shakeY animate__infinite animateDuration10s self-center text-4xl sm:text-6xl'/></a>
+          <h1 className="animate-fadeInDown animate-fast mb-20 text-violet-500 uppercase font-extrabold text-center drop-shadow-lg text-5xl sm:text-9xl ">Colorful Code</h1>
+          <h2 className="animate-fadeIn animate-slow animate-delay-[600ms] mb-20 text-zinc-800 lowercase font-light text-center text-sm sm:text-lg sm:font-normal">Bringing a human touch to technology</h2>
+          <a className='animate-fadeInUpBig animate-duration-[2.1s] animate-delay-[600ms] self-center' href="#about"><FaChevronDown className='animate-shakeY animate-infinite animate-duration-[10s] self-center text-4xl sm:text-6xl'/></a>
         </section>
 
         <InView triggerOnce={true} threshold={0}>
         {({ inView, ref, entry }) => (
           <section id="about" className='snap-start bg-amber-400 w-full h-full flex flex-col overflow-y-auto p-8'>
-            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate__animated animate__slideInDown animate__fast' : 'hidden'}`}>
+            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate-slideInDown animate-fast' : 'hidden'}`}>
               <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-brightMustard"/>
               <h1 className='text-shadow-sm relative uppercase drop-shadow-lg text-white text-center font-semibold text-3xl mb-2 sm:text-9xl sm:mb-10 sm:text-shadow-lg'>About</h1>
             </div>
-            <Image ref={ref} className={`self-center shadow-2xl w-70 h-70 object-fill rounded-md ${inView ? 'animate__animated animate__jackInTheBox animate__slow' : 'hidden'}`} src="/images/profile.jpg" width="200" height="0" alt="Picture of Amir" />
-            <div ref={ref} className={`text-base space-y-6 my-6 self-center sm:mt-12 sm:mb-24 ${inView ? 'animate__animated animate__slideInUp animate__faster' : ''}`}>
+            <Image ref={ref} className={`self-center shadow-2xl w-70 h-70 object-fill rounded-md ${inView ? 'animate-jackInTheBox animate-slow' : 'hidden'}`} src="/images/profile.jpg" width="200" height="0" alt="Picture of Amir" />
+            <div ref={ref} className={`text-base space-y-6 my-6 self-center sm:mt-12 sm:mb-24 ${inView ? 'animate-slideInUp animate-faster' : ''}`}>
               <p className="font-light text-gray-800">I'm the face behind Colorful Code, a 35 year old Software Engineer based in Sweden. At heart I'm a creative soul that is passionate about creating and problem solving. I also love to learn new things in life, so I try to stay curious and keep an open mind.</p>
               <p className="font-light text-gray-800">My clients can always expect a professional service with modern technological solutions. I also aim to create a fun and engaging work environment and elevate my peers when possible.</p>
               <p className="font-light text-gray-800">Outside of work I write and produce music, spend time with friends and family, hike, garden, exercise, travel, listen to podcasts etc. I wish there was more time in life because the list is long and it keeps growing! :D</p>
             </div>
-              <h2 className='text-center font-normal text-xl text-md sm:text-4xl sm:mb-2 sm:font-light'>Tools I use</h2>
+              <h2  ref={ref} className={`text-center font-normal text-xl text-md sm:text-4xl sm:mb-2 sm:font-light ${inView ? 'animate-zoomIn animate-faster' : ''}`}>Tools I use</h2>
               <div className="flex justify-center">
-                <div className="flex flex-wrap max-w-3xl p-2 justify-center gap-0 sm:gap-x-10 gap-y-4">
+                <div ref={ref} className={`flex flex-wrap max-w-3xl p-2 justify-center gap-0 sm:gap-x-10 gap-y-4 ${inView ? 'animate-zoomIn animate-faster' : ''}`}>
                   <SkillsIconLink url="https://www.java.com" icon={<FaJava className={iconStyle} />}/>
                   <SkillsIconLink url="https://www.w3.org/Style/CSS/Overview.en.html" icon={<FaCss3Alt className={iconStyle} />}/>
                   <SkillsIconLink url="https://www.javascript.com" icon={<FaJsSquare className={iconStyle} />}/>
@@ -91,20 +90,20 @@ export default function Home() {
         <InView triggerOnce={true} threshold={0}>
         {({ inView, ref, entry }) => (
           <section id="projects" className='snap-start bg-teal-500  w-full h-full flex flex-col overflow-y-auto p-8'>
-            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate__animated animate__slideInLeft animate__faster' : ''}`}>
+            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate-slideInLeft animate-faster sm:animate-slideInDown sm:animate-fast' : 'hidden'}`}>
               <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-green-300"/>
               <h1 className='text-shadow-sm relative uppercase drop-shadow-lg text-white text-center font-semibold text-3xl mb-2 sm:text-9xl sm:mb-10 sm:text-shadow-lg'>Projects</h1>
             </div>
-            <p ref={ref} className={`text-xs font-thin self-center mb-2 ${inView ? 'animate__animated animate__slideInRight animate__faster' : ''}`}> Most of my work are things I can not share here due to client confidentiality. However, I have more personal projects that will be added soon.</p>
-            <div ref={ref} className={`flex flex-wrap grow gap-y-10 gap-x-20 justify-center overflow-y-auto ${inView ? 'animate__animated animate__slideInLeft animate__faster' : ''}`}>
+            <p ref={ref} className={`text-xs font-thin self-center mb-4 sm:text-base ${inView ? 'animate-slideInRight animate-faster sm:animate-slideInUp' : ''}`}> Most of my work are things I can not share here due to client confidentiality. However, I have more personal projects that will be added soon.</p>
+            <div ref={ref} className={`flex flex-wrap grow gap-y-10 gap-x-20 justify-center overflow-y-auto ${inView ? 'animate-slideInLeft animate-faster sm:animate-slideInUp sm:animate-duration-500' : ''}`}>
               <ProjectCard imageName="teaguide" imageAlt="Image of this site" header="This portfolio site" repoName="nextjs-portfolio-site" siteUrl="https://www.colorfulcode.se" tools={["NextJS", "React", "CSS", "TailwindCSS", "HTML", "Animate.css", "FormCarry"]} text="A single page application to showcase my projects and promote my business. I wanted to learn some new frameworks with this project so I wrote this site using NextJS and Tailwind."/>
               <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
               <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
               <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
+              <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under c under cofsdfsddfsfsdfsdf fdsfsdfff sdfsdf   confsdfsddfsfsdfsdf fdsfsdfff sdfsdf under cofsdfsddfsfsdfsdf fdsfsdfff sdfsdf  under confsdfsddfsfsdfsdf fdsfsdfff sdfsdf under codfff sdfsdf under confsdfsddfsfsdfsdf fdsfsdfff sdfsdf  struction."/>
               <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
               <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
-              <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
-              <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currently under construction."/>
+              <ProjectCard imageName="teaguide" imageAlt="Image of word search site" header="Word search" repoName="" siteUrl="" tools={["Spring Boot", "Java", "React", "NextJS"]} text="Currentlsfsdfsdfdfy under construction."/>
             </div>
           </section>
         )}
@@ -113,14 +112,14 @@ export default function Home() {
         <InView triggerOnce={true} threshold={0}>
         {({ inView, ref, entry }) => (
           <section id="contact" className='snap-start bg-indigo-500 w-full h-full flex flex-col align-middle overflow-y-auto p-8'>
-            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate__animated animate__zoomIn animate__fast' : ''}`}>
+            <div ref={ref} className={`relative flex justify-center mb-4 ${inView ? 'animate-zoomIn animate-fast' : ''}`}>
                 <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-red-400"/>
                 <h1 className='text-shadow-sm relative uppercase drop-shadow-lg text-white text-center font-semibold text-3xl mb-2 sm:text-9xl sm:mb-10 sm:text-shadow-lg'>Contact</h1>
               </div>
 
             {/* Main container in this section */}
-            <div ref={ref} className={`flex flex-wrap self-center space-y-4 w-full shadow-2xl rounded-lg border border-slate-600 sm:w-fit p-2 ${inView ? 'animate__animated animate__slideInUp animate__faster' : ''}`}>
-              <div ref={ref} className={`flex w-full justify-center mt-4 ${inView ? 'animate__animated animate__flipInX animateShortenDelay animate__delay-2s' : ''}`}>
+            <div ref={ref} className={`flex flex-wrap self-center space-y-4 w-full shadow-2xl rounded-lg border border-slate-600 sm:w-fit p-2 ${inView ? 'animate-slideInUp animate-faster' : ''}`}>
+              <div ref={ref} className={`flex w-full justify-center mt-4 ${inView ? 'animate-flipInX animate-delay-[400ms]' : ''}`}>
                 <h2 className="text-center text-xs font-bold shadow-lg border-2 rounded-lg border-green-400 bg-green-100 p-2">Currently available for new contracts.</h2>
               </div>
               {/* Container for contact form and address/icons */}

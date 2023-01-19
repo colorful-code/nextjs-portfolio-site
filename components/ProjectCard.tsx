@@ -17,7 +17,7 @@ const gitHubUrl = "https://github.com/colorful-code/";
 
 const Nav = ({ imageName, imageAlt, header, repoName, siteUrl, tools, text }: ProjectCardProps) => {
     return (
-        <div className="max-w-xs w-full rounded overflow-hidden shadow-lg border border-emerald-600 space-y-4 sm:w-96 sm:mt-10 sm:m">
+        <div className="max-w-xs w-full rounded overflow-hidden shadow-lg border border-emerald-600 space-y-4 sm:h-4/6">
             <div className="flex justify-center items-center">
                 <div className="w-3/4 mt-4 rounded-md p-1">
                     <Image className="w-full h-40 object-fit rounded-sm shadow-[8px_8px_0px_rgba(30,100,105,1)] shadow-round" src={`/images/${imageName}.jpg`} width="200" height="0" alt={imageAlt} />

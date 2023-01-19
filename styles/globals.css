@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 3px 3px 0 #000;
+  }
+  .text-shadow-lg {
+    text-shadow: 10px 10px 0 #000;
+  }
+}
+
 .animateDuration2100ms  {
   --animate-duration: 2.1s;
 }
@@ -12,8 +21,4 @@
 
 .animateShortenDelay {
   --animate-delay: 0.2s;
-}
-
-.sectionTitle {
-  text-shadow: 3px 3px 0 #000;
 }

@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex flex-col align-middle justify-center lg:flex-row lg:gap-10">
               <Image className={`self-center shadow-2xl w-70 h-70 object-fill rounded-md ${inView ? 'animate-jackInTheBox animate-slow' : ''}`} src="/images/profile.jpg" width="200" height="0" alt="Picture of Amir" />
               <div className={`font-light text-black text-center text-base space-y-6 my-6 lg:max-w-xl md:my-12 ${inView ? 'animate-slideInUp animate-faster' : ''}`}>
-                <p className="w-full">I'm the face behind Colorful Code, a 35 year old <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-[102%] before:h-[90%] before:-z-10 before:rounded-[15%_27%_20%_31%] before:-left-1 before:top-1 before:-rotate-2">Software Engineer based in Sweden.</span> At heart I'm a creative soul that is passionate about creating and problem solving. I also love to learn new things in life, so I try to stay curious and keep an open mind.</p>
+                <p className="w-full">I&apos;m the face behind Colorful Code, a 35 year old <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-[102%] before:h-[90%] before:-z-10 before:rounded-[15%_27%_20%_31%] before:-left-1 before:top-1 before:-rotate-2">Software Engineer based in Sweden.</span> At heart I&apos;m a creative soul that is passionate about creating and problem solving. I also love to learn new things in life, so I try to stay curious and keep an open mind.</p>
                 <p>My clients can always expect a <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-full before:h-[90%] before:-z-10 before:rounded-[15%_30%_23%_28%] before:top-1 before:rotate-1">professional service with modern technological solutions.</span> I also aim to create a fun and engaging work environment and elevate my peers when possible. I am a big believer in being <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-full before:h-[90%] before:-z-10 before:rounded-[5%_25%_30%_50%] before:top-1 before:-left-0.5 before:-rotate-1">ambitious, genuine, reliable, responsible and a teamplayer.</span></p>
                 <p>Outside of work I write and produce music, spend time with friends and family, hike, garden, exercise, travel, listen to podcasts etc. I wish there was more time in life because the list is long and it keeps growing! :D</p>
               </div>
@@ -146,13 +146,13 @@ export default function Home() {
                       </div>
                     </div>
                     <div className='flex justify-center space-x-8 md:space-x-12'>         
-                      <a href="https://www.linkedin.com/in/colorfulcode/" target="_blank" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
+                      <a href="https://www.linkedin.com/in/colorfulcode/" target="_blank" rel="noreferrer" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
                         <AiFillLinkedin className='text-4xl fill-red-300'/>
                       </a>   
-                      <a href="https://www.facebook.com/AmicciUntzUntz" target="_blank" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
+                      <a href="https://www.facebook.com/AmicciUntzUntz" target="_blank" rel="noreferrer" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
                         <AiFillFacebook className='text-4xl fill-amber-400'/>
                       </a>   
-                      <a href="https://github.com/colorful-code" target="_blank" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
+                      <a href="https://github.com/colorful-code" target="_blank" rel="noreferrer" className='flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600'>
                         <AiOutlineGithub className='text-4xl fill-teal-400'/>
                       </a>   
                     </div>

@@ -36,8 +36,8 @@ const Nav = ({ imageName, imageAlt, header, repoName, siteUrl, tools, text }: Pr
             <hr className="w-2/3 m-auto opacity-30"/>
             <div className="px-2">
                 <div className="flex justify-center space-x-4 sm:space-x-12">
-                    <a className="shadow-sm flex items-center p-1 rounded-lg text-sm border border-green-600 bg-green-300" href={gitHubUrl + repoName} ><BsGithub className="inline mx-1"/> See code</a>
-                    {siteUrl && <a className="shadow-sm flex items-center p-1 rounded-lg text-sm border border-green-600 bg-green-300" href={siteUrl}><FiExternalLink className="inline mx-1"/> Visit site</a>}
+                    <a className="shadow-sm flex items-center p-1 rounded-lg text-sm border border-green-600 bg-green-300 active:bg-emerald-500 hover:bg-emerald-400 focus:ring-1 focus:ring-gray-600 focus:outline-none" href={gitHubUrl + repoName} target="_blank"><BsGithub className="inline mx-1"/> See code</a>
+                    {siteUrl && <a className="shadow-sm flex items-center p-1 rounded-lg text-sm border border-green-600 bg-green-300 active:bg-emerald-500 hover:bg-emerald-400 focus:ring-1 focus:ring-gray-600 focus:outline-none" href={siteUrl} target="_blank"><FiExternalLink className="inline mx-1"/> Visit site</a>}
                 </div>
             </div>
         </div>

@@ -11,10 +11,6 @@
   }
 }
 
-.animateDuration2100ms  {
-  --animate-duration: 2.1s;
-}
-
 .animateDuration10s  {
   --animate-duration: 10s;
 }

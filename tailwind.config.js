@@ -13,7 +13,8 @@ module.exports = withAnimations({
         'wineRed': '#871400',
         'brightMustard': '#f5730a',
         'oxfordBlue': '#011936',
-        'strongPurple': '#7f00c1'
+        'strongPurple': '#7f00c1',
+        'offWhite': '#fff9fe'
       },
       border: ['focus'],
     },

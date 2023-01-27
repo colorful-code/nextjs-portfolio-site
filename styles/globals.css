@@ -11,10 +11,61 @@
   }
 }
 
-.animateDuration10s  {
+.animateDuration10s {
   --animate-duration: 10s;
 }
 
 .animateShortenDelay {
   --animate-delay: 0.2s;
+}
+
+.scrollBarAbout {
+  /* Foreground, Background */
+  scrollbar-color: #ff9900 #ffcd8c;
+}
+.scrollBarAbout::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scrollBarAbout::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #ff9900;
+}
+.scrollBarAbout::-webkit-scrollbar-track {
+  /* Background */
+  background: #ffcd8c;
+}
+
+.scrollBarProjects {
+  /* Foreground, Background */
+  scrollbar-color: #45a08a #86c3bc;
+}
+.scrollBarProjects::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scrollBarProjects::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #45a08a;
+}
+.scrollBarProjects::-webkit-scrollbar-track {
+  /* Background */
+  background: #86c3bc;
+}
+
+.scrollBarContact {
+  /* Foreground, Background */
+  scrollbar-color: #5959c4 #adafef;
+}
+.scrollBarContact::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scrollBarContact::-webkit-scrollbar-thumb {
+  /* Foreground */
+  background: #5959c4;
+}
+.scrollBarContact::-webkit-scrollbar-track {
+  /* Background */
+  background: #adafef;
 }

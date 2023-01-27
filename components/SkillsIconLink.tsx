@@ -1,4 +1,4 @@
-const SkillsIconLink = ({ url, icon }: { url: "string"; icon: any }) => {
+const SkillsIconLink = ({ url, icon }: { url: string; icon: any }) => {
   return (
     <a
       href={url}

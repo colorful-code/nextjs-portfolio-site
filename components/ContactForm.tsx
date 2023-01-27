@@ -1,7 +1,15 @@
 import { useForm } from "@formcarry/react";
 import { FaCheck } from "react-icons/fa";
 
-function ContactForm({ bgColor, sendBtnBorderColor, sendBtnBg }) {
+function ContactForm({
+  bgColor,
+  sendBtnBorderColor,
+  sendBtnBg,
+}: {
+  bgColor: string;
+  sendBtnBorderColor: string;
+  sendBtnBg: string;
+}) {
   const { state: formcarryState, submit: formcarrySubmit } = useForm({
     id: "zslEjawD4",
   });

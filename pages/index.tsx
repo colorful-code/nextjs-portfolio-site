@@ -442,7 +442,7 @@ export default function Home() {
                   >
                     Currently not available.
                     <br />
-                    Current contract ends 2023-07-31.
+                    Current contract ends 2024-02-01.
                   </h2>
                 </div>
                 {/* Container for contact form and address/icons */}

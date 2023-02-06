@@ -55,13 +55,24 @@ const portfolioProject: Project = {
 };
 
 const wordSearchProject: Project = {
+  underConstruction: false,
+  imageName: "wordsearchSite",
+  imageAlt: "Image of word search game website",
+  header: "Word search game",
+  repoName: "word-search-frontend",
+  siteUrl: "https://colorful-code.github.io/word-search-frontend/",
+  tools: ["Java", "Spring Boot", "REST API", "JavaScript", "CSS", "SASS", "Parcel", "HTML"],
+  text: "A simple word search game. Backend made with Spring Boot and hosted on Render. Frontend in vanilla JS and CSS. Note, backend server will scale down after a period of inactivity! It might take 1-2min for the backend to speed up if you try playing, please be patient.",
+};
+
+const unknownProject: Project = {
   underConstruction: true,
   imageName: "",
   imageAlt: "",
-  header: "Word search game",
+  header: "Unnamed project",
   repoName: "",
   siteUrl: "",
-  tools: ["Java", "Spring Boot", "JavaScript", "CSS"],
+  tools: ["React", "Spring Boot", "MySQL", "CSS"],
   text: "",
 };
 
@@ -273,6 +284,7 @@ export default function Home() {
               >
                 <ProjectCard {...portfolioProject} />
                 <ProjectCard {...wordSearchProject} />
+                <ProjectCard {...unknownProject} />
               </div>
             </section>
           )}
@@ -315,7 +327,7 @@ export default function Home() {
                   >
                     Currently not available.
                     <br />
-                    Current contract ends 2024-02-01.
+                    Existing contract ends 2024-02-01.
                   </h2>
                 </div>
                 {/* Container for contact form and address/icons */}

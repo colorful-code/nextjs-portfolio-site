@@ -8,15 +8,7 @@ import SkillsIconLink from "../components/SkillsIconLink";
 import TopSvg from "../components/svgs/layered-waves-haikei.svg";
 import Brushstroke from "../components/svgs/brushstroke_small.svg";
 import BotSvg from "../components/svgs/layered-waves-haikei-bottom4.svg";
-import {
-  FaChevronDown,
-  FaJava,
-  FaCss3Alt,
-  FaHtml5,
-  FaJsSquare,
-  FaPhp,
-  FaGit,
-} from "react-icons/fa/";
+import { FaChevronDown, FaJava, FaCss3Alt, FaHtml5, FaJsSquare, FaPhp, FaGit } from "react-icons/fa/";
 import { FiChevronsUp } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5/";
 import { DiScrum } from "react-icons/di/";
@@ -42,11 +34,7 @@ import {
   SiTailwindcss,
   SiAdobephotoshop,
 } from "react-icons/si/";
-import {
-  AiFillLinkedin,
-  AiFillFacebook,
-  AiOutlineGithub,
-} from "react-icons/ai/";
+import { AiFillLinkedin, AiFillFacebook, AiOutlineGithub } from "react-icons/ai/";
 import { Inter } from "@next/font/google";
 import { InView } from "react-intersection-observer";
 import React, { useState } from "react";
@@ -62,15 +50,7 @@ const portfolioProject: Project = {
   header: "This portfolio site",
   repoName: "nextjs-portfolio-site",
   siteUrl: "https://www.colorfulcode.se",
-  tools: [
-    "NextJS",
-    "React",
-    "CSS",
-    "TailwindCSS",
-    "HTML",
-    "Animate.css",
-    "FormCarry",
-  ],
+  tools: ["NextJS", "React", "CSS", "TailwindCSS", "HTML", "Animate.css", "FormCarry"],
   text: "A responsive single page application to showcase my projects and promote my business. I wanted to learn some new frameworks with this project so I wrote this site using NextJS and Tailwind amongst other things.",
 };
 
@@ -98,23 +78,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       </Head>
@@ -150,23 +116,14 @@ export default function Home() {
           )}
         </InView>
 
-        <InView
-          triggerOnce={true}
-          threshold={0.01}
-          initialInView={false}
-          fallbackInView={true}
-        >
+        <InView triggerOnce={true} threshold={0.01} initialInView={false} fallbackInView={true}>
           {({ inView, ref, entry }) => (
             <section
               id="about"
               ref={ref}
               className="snap-start bg-amber-400 w-full h-full flex flex-col overflow-y-auto p-8 scrollBarAbout"
             >
-              <div
-                className={`relative flex justify-center mb-4 ${
-                  inView ? "animate-slideInDown animate-fast" : ""
-                }`}
-              >
+              <div className={`relative flex justify-center mb-4 ${inView ? "animate-slideInDown animate-fast" : ""}`}>
                 <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-brightMustard" />
                 <h1 className="text-shadow-sm relative uppercase text-white text-center font-semibold text-3xl mb-2 landscape:md:text-4xl md:text-7xl lg:text-9xl lg:mb-10 lg:text-shadow-lg">
                   About
@@ -192,28 +149,24 @@ export default function Home() {
                     <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-[102%] before:h-[90%] before:-z-10 before:rounded-[15%_27%_20%_31%] before:-left-1 before:top-1 before:-rotate-2 overflow-x-clip">
                       Software Engineer based in Sweden.
                     </span>{" "}
-                    At heart I&apos;m a creative soul that is passionate about
-                    creating and problem solving. I also love to learn new
-                    things in life, so I try to stay curious and keep an open
-                    mind.
+                    At heart I&apos;m a creative soul that is passionate about creating and problem solving. I also love
+                    to learn new things in life, so I try to stay curious and keep an open mind.
                   </p>
                   <p>
                     My clients can always expect a{" "}
                     <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-full before:h-[90%] before:-z-10 before:rounded-[15%_30%_23%_28%] before:top-1 before:rotate-1 overflow-x-clip">
                       professional service with modern technological solutions.
                     </span>{" "}
-                    I also aim to create a fun and engaging work environment and
-                    elevate my peers when possible. I am a big believer in being{" "}
+                    I also aim to create a fun and engaging work environment and elevate my peers when possible. I am a
+                    big believer in being{" "}
                     <span className="relative inline-block before:absolute before:bg-[#ffd500] before:w-full before:h-[90%] before:-z-10 before:rounded-[5%_25%_30%_50%] before:top-1 before:-left-0.5 before:-rotate-1 overflow-x-clip">
-                      ambitious, genuine, reliable, responsible and a
-                      teamplayer.
+                      ambitious, genuine, reliable, responsible and a teamplayer.
                     </span>
                   </p>
                   <p>
-                    Outside of work I write and produce music, spend time with
-                    friends and family, hike, garden, exercise, travel, listen
-                    to podcasts etc. I wish there was more time in life because
-                    the list is long and it keeps growing! :D
+                    Outside of work I write and produce music, spend time with friends and family, hike, garden,
+                    exercise, travel, listen to podcasts etc. I wish there was more time in life because the list is
+                    long and it keeps growing! :D
                   </p>
                 </div>
               </div>
@@ -230,66 +183,27 @@ export default function Home() {
                     inView ? "animate-zoomIn animate-faster" : ""
                   }`}
                 >
-                  <SkillsIconLink
-                    url="https://www.java.com"
-                    icon={<FaJava className={iconStyle} />}
-                  />
+                  <SkillsIconLink url="https://www.java.com" icon={<FaJava className={iconStyle} />} />
                   <SkillsIconLink
                     url="https://www.w3.org/Style/CSS/Overview.en.html"
                     icon={<FaCss3Alt className={iconStyle} />}
                   />
-                  <SkillsIconLink
-                    url="https://www.javascript.com"
-                    icon={<FaJsSquare className={iconStyle} />}
-                  />
+                  <SkillsIconLink url="https://www.javascript.com" icon={<FaJsSquare className={iconStyle} />} />
                   <SkillsIconLink
                     url="https://html.spec.whatwg.org/multipage"
                     icon={<FaHtml5 className={iconStyle} />}
                   />
-                  <SkillsIconLink
-                    url="https://www.typescriptlang.org"
-                    icon={<SiTypescript className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://www.php.net"
-                    icon={<FaPhp className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://www.mysql.com"
-                    icon={<SiMysql className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://isocpp.org"
-                    icon={<SiCplusplus className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://groovy-lang.org"
-                    icon={<SiApachegroovy className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://angular.io"
-                    icon={<SiAngular className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://nextjs.org"
-                    icon={<SiNextdotjs className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://laravel.com"
-                    icon={<SiLaravel className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://github.com"
-                    icon={<SiGithub className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://git-scm.com"
-                    icon={<FaGit className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://about.gitlab.com"
-                    icon={<SiGitlab className={iconStyle} />}
-                  />
+                  <SkillsIconLink url="https://www.typescriptlang.org" icon={<SiTypescript className={iconStyle} />} />
+                  <SkillsIconLink url="https://www.php.net" icon={<FaPhp className={iconStyle} />} />
+                  <SkillsIconLink url="https://www.mysql.com" icon={<SiMysql className={iconStyle} />} />
+                  <SkillsIconLink url="https://isocpp.org" icon={<SiCplusplus className={iconStyle} />} />
+                  <SkillsIconLink url="https://groovy-lang.org" icon={<SiApachegroovy className={iconStyle} />} />
+                  <SkillsIconLink url="https://angular.io" icon={<SiAngular className={iconStyle} />} />
+                  <SkillsIconLink url="https://nextjs.org" icon={<SiNextdotjs className={iconStyle} />} />
+                  <SkillsIconLink url="https://laravel.com" icon={<SiLaravel className={iconStyle} />} />
+                  <SkillsIconLink url="https://github.com" icon={<SiGithub className={iconStyle} />} />
+                  <SkillsIconLink url="https://git-scm.com" icon={<FaGit className={iconStyle} />} />
+                  <SkillsIconLink url="https://about.gitlab.com" icon={<SiGitlab className={iconStyle} />} />
                   <SkillsIconLink
                     url="https://www.atlassian.com/software/jira"
                     icon={<SiJirasoftware className={iconStyle} />}
@@ -298,18 +212,9 @@ export default function Home() {
                     url="https://www.jetbrains.com/teamcity"
                     icon={<SiTeamcity className={iconStyle} />}
                   />
-                  <SkillsIconLink
-                    url="https://www.scrum.org"
-                    icon={<DiScrum className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://www.postman.com"
-                    icon={<SiPostman className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://spring.io"
-                    icon={<SiSpring className={iconStyle} />}
-                  />
+                  <SkillsIconLink url="https://www.scrum.org" icon={<DiScrum className={iconStyle} />} />
+                  <SkillsIconLink url="https://www.postman.com" icon={<SiPostman className={iconStyle} />} />
+                  <SkillsIconLink url="https://spring.io" icon={<SiSpring className={iconStyle} />} />
                   <SkillsIconLink
                     url="https://spring.io/projects/spring-boot"
                     icon={<SiSpringboot className={iconStyle} />}
@@ -322,18 +227,9 @@ export default function Home() {
                     url="https://code.visualstudio.com"
                     icon={<SiVisualstudiocode className={iconStyle} />}
                   />
-                  <SkillsIconLink
-                    url="https://www.docker.com"
-                    icon={<SiDocker className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://www.linux.org"
-                    icon={<SiLinux className={iconStyle} />}
-                  />
-                  <SkillsIconLink
-                    url="https://tailwindcss.com"
-                    icon={<SiTailwindcss className={iconStyle} />}
-                  />
+                  <SkillsIconLink url="https://www.docker.com" icon={<SiDocker className={iconStyle} />} />
+                  <SkillsIconLink url="https://www.linux.org" icon={<SiLinux className={iconStyle} />} />
+                  <SkillsIconLink url="https://tailwindcss.com" icon={<SiTailwindcss className={iconStyle} />} />
                   <SkillsIconLink
                     url="https://www.adobe.com/products/photoshop.html"
                     icon={<SiAdobephotoshop className={iconStyle} />}
@@ -344,12 +240,7 @@ export default function Home() {
           )}
         </InView>
 
-        <InView
-          triggerOnce={true}
-          threshold={0.01}
-          initialInView={false}
-          fallbackInView={true}
-        >
+        <InView triggerOnce={true} threshold={0.01} initialInView={false} fallbackInView={true}>
           {({ inView, ref, entry }) => (
             <section
               id="projects"
@@ -358,9 +249,7 @@ export default function Home() {
             >
               <div
                 className={`relative flex justify-center mb-4 ${
-                  inView
-                    ? "animate-slideInLeft animate-faster sm:animate-slideInDown sm:animate-fast"
-                    : ""
+                  inView ? "animate-slideInLeft animate-faster sm:animate-slideInDown sm:animate-fast" : ""
                 }`}
               >
                 <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-green-300" />
@@ -370,21 +259,16 @@ export default function Home() {
               </div>
               <p
                 className={`text-xs font-thin self-center mb-4 md:text-base ${
-                  inView
-                    ? "animate-slideInRight animate-faster sm:animate-slideInUp"
-                    : ""
+                  inView ? "animate-slideInRight animate-faster sm:animate-slideInUp" : ""
                 }`}
               >
                 {" "}
-                Most of my work are things I can not share here due to client
-                confidentiality. However, I have more personal projects that
-                will be added soon.
+                Most of my work are things I can not share here due to client confidentiality. However, I have more
+                personal projects that will be added soon.
               </p>
               <div
                 className={`flex flex-wrap gap-y-10 gap-x-20 justify-center overflow-y-auto scrollBarProjects ${
-                  inView
-                    ? "animate-slideInLeft animate-faster sm:animate-slideInUp sm:animate-duration-500"
-                    : ""
+                  inView ? "animate-slideInLeft animate-faster sm:animate-slideInUp sm:animate-duration-500" : ""
                 }`}
               >
                 <ProjectCard {...portfolioProject} />
@@ -394,23 +278,14 @@ export default function Home() {
           )}
         </InView>
 
-        <InView
-          triggerOnce={true}
-          threshold={0.01}
-          initialInView={false}
-          fallbackInView={true}
-        >
+        <InView triggerOnce={true} threshold={0.01} initialInView={false} fallbackInView={true}>
           {({ inView, ref, entry }) => (
             <section
               id="contact"
               ref={ref}
               className="snap-start bg-indigo-500 w-full h-full flex flex-col align-middle overflow-y-auto p-8 scrollBarContact"
             >
-              <div
-                className={`relative flex justify-center mb-4 ${
-                  inView ? "animate-zoomIn animate-fast" : ""
-                }`}
-              >
+              <div className={`relative flex justify-center mb-4 ${inView ? "animate-zoomIn animate-fast" : ""}`}>
                 <Brushstroke className="absolute w-1/2 h-1/2 top-1/2 fill-red-400" />
                 <h1 className="text-shadow-sm relative uppercase text-white text-center font-semibold text-3xl mb-2 landscape:md:text-4xl md:text-7xl lg:text-9xl lg:mb-10 lg:text-shadow-lg">
                   Contact
@@ -424,9 +299,7 @@ export default function Home() {
                 }`}
               >
                 <div
-                  className={`flex w-full justify-center mt-4 ${
-                    inView ? "animate-flipInX animate-delay-[400ms]" : ""
-                  }`}
+                  className={`flex w-full justify-center mt-4 ${inView ? "animate-flipInX animate-delay-[400ms]" : ""}`}
                 >
                   <h2
                     className={`text-center text-xs font-bold shadow-lg border rounded-lg border-black bg-gradient-to-r from-lime-200 to-emerald-200 p-2 ${
@@ -448,11 +321,7 @@ export default function Home() {
                 {/* Container for contact form and address/icons */}
                 <div className="flex flex-wrap w-full justify-center p-2">
                   <div className="flex items-center max-w-xl lg:w-full">
-                    <ContactForm
-                      bgColor="indigo-500"
-                      sendBtnBorderColor="indigo-600 "
-                      sendBtnBg="indigo-200"
-                    />
+                    <ContactForm bgColor="indigo-500" sendBtnBorderColor="indigo-600 " sendBtnBg="indigo-200" />
                   </div>
                   <div className="flex grow flex-col h-auto self-center mt-8 space-y-10">
                     <div className="flex items-center justify-center">
@@ -474,7 +343,7 @@ export default function Home() {
                         <AiFillLinkedin className="text-4xl fill-red-300" />
                       </a>
                       <a
-                        href="https://www.facebook.com/AmicciUntzUntz"
+                        href="https://www.facebook.com/ColorfulCodeAB"
                         target="_blank"
                         rel="noreferrer"
                         className="flex justify-center align-middle shadow-md bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 ring-offset-indigo-600"

@@ -13,17 +13,13 @@ const Nav = ({ showHamburger = false }) => {
         <div className="flex flex-col">
           <div
             className={`-z-10 opacity-80 absolute bg-black -top-8 -left-8 rounded-br-[60%] transform transition-all duration-[0.2s] ${
-              burgerMenuOpen
-                ? "h-60 w-40 -top-4 -left-10 rounded-br-[35%]"
-                : "h-24  w-20"
+              burgerMenuOpen ? "h-60 w-40 -top-4 -left-10 rounded-br-[35%]" : "h-24  w-20"
             }`}
           ></div>
           <div className="absolute top-2 left-2">
             <button
               onClick={() => setburgerMenuOpen(!burgerMenuOpen)}
-              className={`h-6 w-6 duration-500 transform origin-center ${
-                burgerMenuOpen ? "rotate-45" : ""
-              }`}
+              className={`h-6 w-6 duration-500 transform origin-center ${burgerMenuOpen ? "rotate-45" : ""}`}
             >
               <div
                 className={`relative bg-white h-[2px] w-5 transform transition-all delay-100 origin-center before:bg-white before:h-[2px] before:w-5 before:absolute before:left-0 before:transition-all before:duration-100 after:bg-white after:h-[2px] after:w-5 after:absolute after:left-0 after:transition-all after:duration-100 ${
@@ -35,9 +31,7 @@ const Nav = ({ showHamburger = false }) => {
             </button>
             <ul
               className={`text-white mt-4 ml-4 space-y-3 font-bold underline decoration-2 underline-offset-2 ${
-                burgerMenuOpen
-                  ? "block animate-bounceInLeft animate-duration-[0.9s]"
-                  : "hidden"
+                burgerMenuOpen ? "block animate-bounceInLeft animate-duration-[0.9s]" : "hidden"
               } `}
             >
               <li>

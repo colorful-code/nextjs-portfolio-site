@@ -17,9 +17,7 @@ function ContactForm({
   if (formcarryState.submitted) {
     return (
       <div className="flex flex-col justify-center items-center w-full h-fit p-2 ring-1 rounded-xl ring-black bg-opacity-70 bg-white animate-bounceIn animate-duration-[1.4s]">
-        <p className="text-sm lg:text-lg text-black font-semibold text-center">
-          Thank you! Message sent.
-        </p>
+        <p className="text-sm lg:text-lg text-black font-semibold text-center">Thank you! Message sent.</p>
         <FaCheck className="text-xl lg:text-6xl fill-emerald-500" />
       </div>
     );
@@ -28,10 +26,7 @@ function ContactForm({
   const labelStyle = "font-semibold text-slate-300";
 
   return (
-    <form
-      className={`flex flex-col space-y-4 w-full bg-${bgColor} p-4 rounded-xl`}
-      onSubmit={formcarrySubmit}
-    >
+    <form className={`flex flex-col space-y-4 w-full bg-${bgColor} p-4 rounded-xl`} onSubmit={formcarrySubmit}>
       <div>
         <label className={labelStyle} htmlFor="name">
           Name:

@@ -15,27 +15,14 @@ export interface Project {
 
 const gitHubUrl = "https://github.com/colorful-code/";
 
-const ProjectCard = ({
-  underConstruction,
-  imageName,
-  imageAlt,
-  header,
-  repoName,
-  siteUrl,
-  tools,
-  text,
-}: Project) => {
+const ProjectCard = ({ underConstruction, imageName, imageAlt, header, repoName, siteUrl, tools, text }: Project) => {
   return (
     <div className="flex flex-col py-6 gap-6 w-96 max-w-sm rounded overflow-hidden shadow-lg border border-emerald-600">
       <div className="flex-none flex justify-center items-center">
         <div className="w-3/4">
           <Image
             className="w-full h-40 object-cover rounded-sm shadow-[8px_8px_0px_rgba(30,100,105,1)] shadow-round"
-            src={`${
-              underConstruction || !imageName
-                ? "/images/under_construction.webp"
-                : `/images/${imageName}.webp`
-            }`}
+            src={`${underConstruction || !imageName ? "/images/under_construction.webp" : `/images/${imageName}.webp`}`}
             width="286"
             height="160"
             alt={imageAlt ?? "Project currently under construction."}
@@ -43,9 +30,7 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="px-6 grow">
-        <h1 className="text-neutral-800 font-medium text-lg mb-2 text-center">
-          {header}
-        </h1>
+        <h1 className="text-neutral-800 font-medium text-lg mb-2 text-center">{header}</h1>
         <p className="text-neutral-800 text-base font-extralight text-center">
           {text ? text : "Currently under construction"}
         </p>
